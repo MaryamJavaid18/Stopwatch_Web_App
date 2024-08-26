@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch Web App</title>
+  
+    <style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #323740; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff; 
+}
+
+.stopwatch {
+    text-align: center;
+    background: #3b3e47; 
+    padding: 30px;
+    border-radius: 15px; 
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    max-width: 350px;
+    width: 100%;
+}
+#display {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #e0e0e0; 
+}
+
+.buttons button {
+    margin: 10px;
+    padding: 15px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px; 
+    transition: background-color 0.3s, transform 0.2s; 
+}
+#start {
+    background-color: #28a745; 
+    color: white;
+}
+
+#stop {
+    background-color: #561958; 
+    color: white;
+}
+
+#reset {
+    background-color: #ff0783; 
+    color: #fafafa;
+}
+
+#lap {
+    background-color: #0da2c3; 
+    color: white;
+}
+
+.buttons button:hover {
+    background-color: #555a66; 
+    transform: scale(1.05); 
+}
+
+.buttons button:active {
+    transform: scale(0.95); 
+}
+
+
+#laps {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: 150px;
+    overflow-y: auto; 
+    background-color: #2f3239; 
+    border-radius: 10px;
+    padding: 10px;
+}
+#laps li {
+    padding: 8px;
+    border-bottom: 1px solid #444;
+    color: #ffffff; 
+}
+#laps li:last-child {
+    border-bottom: none;
+}
+#laps::-webkit-scrollbar {
+    width: 8px;
+}
+#laps::-webkit-scrollbar-thumb {
+    background-color: #444; 
+    border-radius: 10px;
+}
+#laps::-webkit-scrollbar-track {
+    background: #2f3239; 
+}
+    </style>
+</head>
+<body>
+    <div class="stopwatch">
+        <h1>Stopwatch</h1>
+        <div id="display">00:00:00</div>
+        <div class="buttons">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+            <button id="lap">Lap</button>
+        </div>
+        <ul id="laps"></ul>
+    </div>
+    <script src="Stopwatchscript.js"></script>
+</body>
+</html>
